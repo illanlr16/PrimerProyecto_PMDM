@@ -1,0 +1,24 @@
+.vegetales{
+    width:500px;
+    height: 500px;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border:1px solid red;
+}
+
+.frutas{
+    height: 100px;
+    width:250px;
+    border:1px solid black;
+    display:flex;
+    flex-direction:column;
+}
+
+.verduras{
+    height:100px;
+    width:250px;
+    border:1px solid black;
+    display:flex;
+    flex-direction:column;
+}
