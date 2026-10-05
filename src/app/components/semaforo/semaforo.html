@@ -1,0 +1,22 @@
+<div class="cajaSemaforos">
+    @for(semaforo of semaforos; track $index){
+
+            <div class="cajaSemaforo">
+                <div class="circulos" id="rojo" [style.background-color]="rojo()"></div>
+                <div class="circulos" id="amarillo"[style.background-color]="amarillo()"></div>
+                <div class="circulos" id="verde" [style.background-color]="verde()"></div>
+            </div>
+    }
+</div>
+
+
+<!-- Señales/Biding-->
+
+<h1 [style.color]="colorin()">{{ contador() }}</h1>
+
+<div class="botones">
+    <button (click)="incrementar()">+1</button>
+    <button (click)="decrementar()">-1</button>
+    <button (click)="resetear()">Reset</button>
+</div>
+

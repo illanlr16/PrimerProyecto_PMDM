@@ -1,0 +1,34 @@
+<div class="calculadora_container"> 
+
+    <div class="pantallas_container">
+
+        <button class="pantalla_numero1" (click)=seleccionarPantalla(1)>{{numero1 ?? '-'}}</button>
+        <button class="pantalla_numero2" (click)=seleccionarPantalla(2)>{{numero2 ?? '-'}}</button>
+        <div class="pantalla_operacion">{{ resultado ?? '-' }}</div>
+
+    </div>
+    
+        <div class="container_numeros_operaciones">
+
+            <div class="container_numeros">
+                <button class="1" (click)="seleccionarNumero(1)">1</button>
+                <button class="2" (click)="seleccionarNumero(2)">2</button>
+                <button class="3" (click)="seleccionarNumero(3)">3</button>
+                <button class="4" (click)="seleccionarNumero(4)">4</button>
+                <button class="5" (click)="seleccionarNumero(5)">5</button>
+                <button class="6" (click)="seleccionarNumero(6)">6</button>
+                <button class="7" (click)="seleccionarNumero(7)">7</button>
+                <button class="8" (click)="seleccionarNumero(8)">8</button>
+                <button class="9" (click)="seleccionarNumero(9)">9</button>
+                <button class="0" (click)="seleccionarNumero(0)">0</button>
+            </div>
+
+            <div class="container_operaciones">
+                <button class="sumar" (click)="calcular('+')">+</button>
+                <button class="restar" (click)="calcular('-')">-</button>
+                <button class="multiplicar" (click)="calcular('*')">*</button>
+                <button class="dividir" (click)="calcular('/')">/</button>
+            </div>
+        </div>
+
+</div>

@@ -1,0 +1,56 @@
+.cajaSemaforos{
+    width:1000px;
+    display:flex;
+
+}
+
+.cajaSemaforo{
+    border:1px solid black;
+    background-color: grey;
+    width: 50px;
+    height: 150px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.circulos{
+    width:40px;
+    height:40px;
+    border-radius:100%;
+    border:1px solid black;
+}
+
+/* #rojo{
+    background-color:red;
+}
+
+#amarillo{
+    background-color:yellow;
+}
+
+#verde{
+    background-color:green;
+} */
+
+/* botones */
+.botones{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    width:auto;
+    justify-content:space-around;
+}
+
+button{
+    margin-top:10px;
+    width:100px;
+    height:30px;
+    border-radius:5px;
+    border: 1px solid black;
+    background-color:rgb(139, 139, 158);
+    color:white;
+    cursor:pointer;
+}
