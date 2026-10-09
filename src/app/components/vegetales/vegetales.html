@@ -1,0 +1,16 @@
+<div class="vegetales">
+    <div class="verdura">
+        @for(vegetal of vegetales; track $index){
+            <div class="verduras">
+                <img [src]="vegetal.imagen" width="75" height="75">
+                <li>{{vegetal.nombre}} : @if(vegetal.like){
+                    👍
+                } @else {
+                    👎
+                }
+                </li>
+            </div>
+        }
+    </div>
+
+</div>
