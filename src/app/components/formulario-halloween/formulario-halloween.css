@@ -1,0 +1,11 @@
+.textoError{
+    color:brown;
+    font-size:x-small;
+}
+
+.formulario{
+    display:flex;
+    flex-direction:column;
+    width:360px;
+    
+}
