@@ -28,8 +28,21 @@
             }
             <br>
 
+            <label for="objeto">Objeto:</label>
+            <input type="objeto" formControlName="objeto">
+            @if(formularioHalloween.controls.objeto.invalid){
+                <span class="textoError">Eso no es un objeto valido</span>
+                <br>
+            }
+
             <button type="submit" [disabled]="formularioHalloween.invalid">enviar</button>
         </fieldset>
-        
+
     </form>
+
+    <ul>
+        @for (item of guardarObjetos; track $index) {
+            <li>{{item.objeto}}</li>
+        }
+    </ul>
 </div>
