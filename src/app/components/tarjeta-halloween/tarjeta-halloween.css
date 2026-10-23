@@ -1,0 +1,56 @@
+.tarjetaHalloween {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 450px;
+  min-height: 180px;
+  padding: 20px;
+  background-color: #241536;
+  color: #ffffff;
+  border: 2px solid #ff7518;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  display: block;
+  flex-shrink: 0;
+  width: 150px;
+  height: 100px;
+  background-color: #3b2450;
+  border: 2px solid #ff7518;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.objeto,
+.descripcion,
+.propietario {
+  margin: 0;
+}
+
+.objeto {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff9d3d;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e5dced;
+  margin-bottom: 15px;
+}
+
+.propietario {
+  font-size: 13px;
+  color: #c9b5dc;
+  margin-top: auto;
+}
+
+
+

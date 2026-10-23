@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TarjetaHalloween } from '../tarjeta-halloween/tarjeta-halloween';
 
 
 @Component({
-  imports: [ReactiveFormsModule,],
+  imports: [ReactiveFormsModule, TarjetaHalloween],
   selector: 'app-formulario-halloween',
   styleUrl: './formulario-halloween.css',
   templateUrl: './formulario-halloween.html',
@@ -11,9 +12,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class FormularioHalloween {
 
   formularioHalloween = new FormGroup({
-    nombre: new FormControl('', [Validators.maxLength(50), Validators.minLength(3), Validators.required]),
-    email: new FormControl('', [Validators.email, Validators.required]), 
-    edad: new FormControl('', [Validators.min(0), Validators.max(120), Validators.required]),
+    imagen: new FormControl('', [Validators.required]),
+    descripcion: new FormControl('', [Validators.maxLength(200), Validators.minLength(5),Validators.required]), 
+    propietario: new FormControl('', [Validators.required]),
     objeto: new FormControl('', [Validators.maxLength(50), Validators.minLength(3), Validators.required])
   })
 
@@ -23,5 +24,7 @@ export class FormularioHalloween {
     console.log(this.formularioHalloween.value)
     console.log(this.formularioHalloween.get('email')?.value)
     this.guardarObjetos.push(this.formularioHalloween.value)    
+
+    this.formularioHalloween.reset()
   }
 }

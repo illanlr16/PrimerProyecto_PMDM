@@ -4,26 +4,26 @@
         <fieldset>
             <legend><h1>Formulario De Halloween</h1></legend>
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" formControlName="nombre">
-            @if(formularioHalloween.controls.nombre.invalid){
-                <span class="textoError">El nombre es invalido, tiene que ser entre 3 y 50 caracteres</span>
+            <label for="imagen">Imagen:</label>
+            <input type="text" formControlName="imagen">
+            @if(formularioHalloween.controls.imagen.invalid){
+                <span class="textoError">Imagen inválida</span>
                 <br>
             }
             <br>
 
-            <label for="email">Email:</label>
-            <input type="email" formControlName="email">
-            @if(formularioHalloween.controls.email.invalid){
-                <span class="textoError">Eso no es un email</span>
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" formControlName="descripcion">
+            @if(formularioHalloween.controls.descripcion.invalid){
+                <span class="textoError">Mierdón de descripción</span>
                 <br>
             }
             <br>
 
-            <label for="edad">Edad:</label>
-            <input type="number" formControlName="edad">
-            @if(formularioHalloween.controls.edad.invalid){
-                <span class="textoError">Esa no es tu edad ni de coña</span>
+            <label for="propietario">Propietario:</label>
+            <input type="text" formControlName="propietario">
+            @if(formularioHalloween.controls.propietario.invalid){
+                <span class="textoError">Propietario inválido</span>
                 <br>
             }
             <br>
@@ -31,7 +31,7 @@
             <label for="objeto">Objeto:</label>
             <input type="objeto" formControlName="objeto">
             @if(formularioHalloween.controls.objeto.invalid){
-                <span class="textoError">Eso no es un objeto valido</span>
+                <span class="textoError">Objeto</span>
                 <br>
             }
 
@@ -42,7 +42,15 @@
 
     <ul>
         @for (item of guardarObjetos; track $index) {
-            <li>{{item.objeto}}</li>
+            <app-tarjeta-halloween
+                [imagen]="item.imagen"
+                [propietario]="item.propietario"
+                [objeto]="item.objeto"
+                [descripcion]="item.descripcion"
+            ></app-tarjeta-halloween>
+            <br>
         }
+
+        
     </ul>
 </div>

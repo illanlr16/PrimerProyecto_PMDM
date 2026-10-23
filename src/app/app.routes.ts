@@ -4,6 +4,7 @@ import { Vegetales } from './components/vegetales/vegetales';
 import { Hermingo } from './components/hermingo/hermingo';
 import { Calculadora } from './components/calculadora/calculadora';
 import { FormularioHalloween } from './components/formulario-halloween/formulario-halloween';
+import { TarjetaHalloween } from './components/tarjeta-halloween/tarjeta-halloween';
 
 export const routes: Routes = [
     {path: '', component: Hermingo},
