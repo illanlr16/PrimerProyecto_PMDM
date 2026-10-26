@@ -29,7 +29,7 @@
             <br>
 
             <label for="objeto">Objeto:</label>
-            <input type="objeto" formControlName="objeto">
+            <input type="text" formControlName="objeto">
             @if(formularioHalloween.controls.objeto.invalid){
                 <span class="textoError">Objeto</span>
                 <br>
@@ -43,14 +43,13 @@
     <ul>
         @for (item of guardarObjetos; track $index) {
             <app-tarjeta-halloween
+                (borrar)="eliminar($index)"
                 [imagen]="item.imagen"
                 [propietario]="item.propietario"
                 [objeto]="item.objeto"
                 [descripcion]="item.descripcion"
             ></app-tarjeta-halloween>
             <br>
-        }
-
-        
+        }        
     </ul>
 </div>

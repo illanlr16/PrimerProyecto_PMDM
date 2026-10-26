@@ -21,10 +21,14 @@ export class FormularioHalloween {
   guardarObjetos: any[] = []
 
   enviar(){
-    console.log(this.formularioHalloween.value)
-    console.log(this.formularioHalloween.get('email')?.value)
+    // console.log(this.formularioHalloween.value)
+    // console.log(this.formularioHalloween.get('email')?.value)
     this.guardarObjetos.push(this.formularioHalloween.value)    
 
     this.formularioHalloween.reset()
+  }
+
+  eliminar(index:number){
+    this.guardarObjetos.splice(index, 1)
   }
 }

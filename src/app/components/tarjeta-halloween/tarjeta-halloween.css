@@ -52,5 +52,11 @@ img {
   margin-top: auto;
 }
 
+.borrar{
+  width:450px;
+  display:flex;
+  justify-content: center;
+  
+}
 
 
