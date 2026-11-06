@@ -3,6 +3,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { Router, RouterLink } from '@angular/router';
+import { Saludo } from '../../services/saludo';
 
 
 @Component({
@@ -14,6 +15,9 @@ import { Router, RouterLink } from '@angular/router';
 export class NavBar {
 
   private router = inject(Router);
+  
+  saludo = inject(Saludo);
+  mensaje = this.saludo.saludar();
 
   lista(){
     this.router.navigate(['/vegetales'])
