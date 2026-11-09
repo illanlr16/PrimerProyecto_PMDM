@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TarjetaHalloween } from '../tarjeta-halloween/tarjeta-halloween';
-import { Saludo } from '../../services/saludo';
+import { Saludo } from '../../services/saludo/saludo';
 
 
 @Component({
