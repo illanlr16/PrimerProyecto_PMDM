@@ -12,7 +12,9 @@
 
     <div class="mejorasContainer">
 
-        <p (click)="mejora()" class="opcion">x2 en click | Coste: {{costeMejora}} galletas</p>
+        <p (click)="mejora()" class="opcion">x2 en click | Coste: {{costeMejoraClick}} galletas</p>
+        <p (click)="mejoraPorTiempo1()" class="opcion">Abuelita (1 Galleta/s) | Coste: {{costeMejoraIdle1}} galletas</p>
+        <p (click)="mejoraPorTiempo2()" class="opcion">Fábrica (5 Galleta/s) | Coste: {{costeMejoraIdle2}} galletas</p>
 
     </div>
 
