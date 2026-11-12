@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="galletaContainer">
+
+        <span type="button" (click)="hacerClick()" class="imagen_galleta">
+
+            <img class="img" [src]="imagen"]>
+            <h1>{{ contador() }}</h1>
+        </span>
+        
+    </div>
+
+    <div class="mejorasContainer">
+
+        <p (click)="mejora()" class="opcion">x2 en click | Coste: {{costeMejora}} galletas</p>
+
+    </div>
+
+</div>

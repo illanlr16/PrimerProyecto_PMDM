@@ -1,0 +1,26 @@
+.img{
+    width: 500px;
+    height: 350px;
+}
+
+@keyframes pulse {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.1);
+}
+100% {
+transform: scale(1);
+}
+}
+
+img:active {
+animation: pulse 0.3s;
+}
+
+.opcion{
+    margin-left:5px;
+    margin-right: 5px;
+    cursor:pointer;
+}

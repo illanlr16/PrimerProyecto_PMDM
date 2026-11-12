@@ -5,9 +5,10 @@ import { Calculadora } from './components/calculadora/calculadora';
 import { Vegetales } from './components/vegetales/vegetales';
 import { Hermingo } from './components/hermingo/hermingo';
 import { NavBar } from './components/nav-bar/nav-bar';
+import { Galletas } from './components/galletas/galletas';
 
 @Component({
-  imports: [RouterOutlet, Semaforo, Calculadora, Vegetales, Hermingo, NavBar],
+  imports: [RouterOutlet, Semaforo, Calculadora, Vegetales, Hermingo, NavBar, Galletas],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
