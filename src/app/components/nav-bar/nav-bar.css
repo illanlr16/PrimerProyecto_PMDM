@@ -1,6 +1,50 @@
-.opcion{
-    margin-left:5px;
-    margin-right: 5px;
-    cursor:pointer;
+.navBar {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
 }
+
+mat-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    min-height: 70px;
+    padding: 12px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.opcion {
+    padding: 10px 14px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opcion:hover {
+    transform: translateY(-2px);
+    background-color: rgba(128, 128, 128, 0.15);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+mat-toolbar button {
+    border-radius: 9px;
+    padding: 8px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+mat-toolbar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 

@@ -3,16 +3,20 @@
     height: 350px;
 }
 
+.container{
+    background: linear-gradient(180deg, #5a351e, #291811);
+}
+
 @keyframes pulse {
-0% {
-transform: scale(1);
-}
-50% {
-transform: scale(1.1);
-}
-100% {
-transform: scale(1);
-}
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
 }
 
 img:active {
@@ -23,4 +27,90 @@ animation: pulse 0.3s;
     margin-left:5px;
     margin-right: 5px;
     cursor:pointer;
+}
+
+.galletaContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffdb8a;
+    text-align: center;
+
+    text-shadow:
+        2px 2px 0 #8b5729,
+        4px 4px 0 #49260f,
+        0 0 15px rgba(255, 190, 80, 0.5);
+
+    background: linear-gradient(180deg, #5a351e, #321b10);
+    border: 4px solid #a66b32;
+    border-radius: 15px;
+
+    padding: 18px 30px;
+    margin: 20px auto;
+
+    width: fit-content;
+    min-width: 250px;
+
+    box-shadow:
+        0 6px 0 #1b1009,
+        0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mejorasContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    width: 320px;
+    background: linear-gradient(145deg, #4b2c1b, #2e190f);
+    border: 4px solid #8b5a2b;
+    border-radius: 15px;
+    box-shadow: 
+        0 6px 0 #1b1009,
+        0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mejorasContainer .opcion {
+    margin: 0;
+    padding: 15px 12px;
+    background: linear-gradient(180deg, #e8b96e, #c78a43);
+    color: #49260f;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: 3px solid #8b5729;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 0 #70401e;
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.mejorasContainer .opcion:hover {
+    background: linear-gradient(180deg, #ffe0a0, #e8ae59);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 #70401e, 0 5px 12px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+.mejorasContainer .opcion:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #70401e;
+}
+
+.centrarMejoras{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galletasPorSegundo{
+    font-size: small;
 }

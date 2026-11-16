@@ -2,20 +2,30 @@
 
     <div class="galletaContainer">
 
-        <span type="button" (click)="hacerClick()" class="imagen_galleta">
+        <span class="galletita" type="button" (click)="mejoras.hacerClick()" class="imagen_galleta">
 
             <img class="img" [src]="imagen"]>
-            <h1>{{ contador() }}</h1>
         </span>
+        <h1>{{ mejoras.contador() }}<p class="galletasPorSegundo">🍪/s: {{mejoras.valorPorSegundoTotal()}}</p></h1>
         
     </div>
 
-    <div class="mejorasContainer">
+    <div class="centrarMejoras">
 
-        <p (click)="mejora()" class="opcion">x2 en click | Coste: {{costeMejoraClick}} galletas</p>
-        <p (click)="mejoraPorTiempo1()" class="opcion">Abuelita (1 Galleta/s) | Coste: {{costeMejoraIdle1}} galletas</p>
-        <p (click)="mejoraPorTiempo2()" class="opcion">Fábrica (5 Galleta/s) | Coste: {{costeMejoraIdle2}} galletas</p>
+        <div class="mejorasContainer">
+            <h1>Mejoras</h1>
+            <p (click)="mejoras.mejora()" class="opcion">x2 en click [LVL {{mejoras.nivelClick}}] | Coste: {{mejoras.costeMejoraClick}} galletas</p>
+            <p (click)="mejoras.mejoraPorTiempo1()" class="opcion">Abuelita [LVL {{mejoras.nivelMejoraIdle1}}] (+1 Galleta/s) | Coste: {{mejoras.costeMejoraIdle1}} galletas</p>
+            <p (click)="mejoras.mejoraPorTiempo2()" class="opcion">Fábrica [LVL {{mejoras.nivelMejoraIdle2}}] (+5 Galleta/s) | Coste: {{mejoras.costeMejoraIdle2}} galletas</p>
+        </div>
 
     </div>
 
+    @if(mejoras.valorPorSegundo() >= 1){
+        <app-panel-prestigio></app-panel-prestigio>
+        <p (click)="prestigio.reset()"></p>
+    }
+
 </div>
+
+

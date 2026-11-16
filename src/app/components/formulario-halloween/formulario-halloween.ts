@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TarjetaHalloween } from '../tarjeta-halloween/tarjeta-halloween';
-import { Saludo } from '../../services/saludo/saludo';
 
 
 @Component({
@@ -11,8 +10,6 @@ import { Saludo } from '../../services/saludo/saludo';
   templateUrl: './formulario-halloween.html',
 })
 export class FormularioHalloween {
-
-  saludo = inject(Saludo);
 
   formularioHalloween = new FormGroup({
     imagen: new FormControl('', [Validators.required]),
@@ -28,7 +25,7 @@ export class FormularioHalloween {
     // console.log(this.formularioHalloween.get('email')?.value)
     this.guardarObjetos.push(this.formularioHalloween.value)  
     
-    this.saludo.setNombre(this.formularioHalloween.get('nombre')?.value)
+
 
     this.formularioHalloween.reset()
   }
