@@ -1,12 +1,14 @@
 <div class="container">
     <div class="prestigioContainer">
         <h1>Prestigio</h1>
-        <h5>Puntos totales: </h5>
+        <h5>Puntos totales: {{prestigio.ptsPrestigio()}}</h5>
+        
 
         <div class="mejorasContainer">
-            <p>x2 en generación de galletas por Click</p>
-            <p>x2 en generación de galletas Idle</p>
-            <p>Reduccion de precios a la mitad</p>
+            <p (click)="prestigio.reset()" class="opcion btn-reset">Prestigio</p>
+            <p (click)="prestigio.mejoraPrestigioClick()" class="opcion">x2 en generación de galletas por Click</p>
+            <p (click)="prestigio.mejoraPrestigioIdle()" class="opcion">x2 en generación de galletas Idle</p>
+            <p (click)="prestigio.mejoraPrestigioPrecio()" class="opcion">Reduccion de precios a la mitad</p>
         </div>
     </div>
     
